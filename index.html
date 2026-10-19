@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>STAR STUDIO — 星星素材實驗室</title>
+<style>
+:root{--bg:#10110f;--panel:#1a1c18;--line:#343831;--lime:#c7ff4d;--text:#f1f3e9;--muted:#9da396}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,'Arial',sans-serif}button,input,select{font:inherit}button{cursor:pointer}header{height:76px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 34px}.brand{font-weight:950;letter-spacing:-1.8px;font-size:28px}.brand span{color:var(--lime)}.tiny{font-size:10px;letter-spacing:2px;color:var(--muted);text-transform:uppercase}.pill{border:1px solid var(--line);border-radius:99px;padding:9px 14px;font-size:11px;color:var(--lime)}main{max-width:1510px;margin:auto;padding:30px;display:grid;grid-template-columns:330px minmax(0,1fr);gap:24px}.sidebar{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:23px;align-self:start}.topline{display:flex;justify-content:space-between;align-items:center;margin-bottom:25px}h1{font-size:18px;margin:0;letter-spacing:-.4px}h2{margin:0;font-size:12px;text-transform:uppercase;letter-spacing:2px}.section{padding:20px 0;border-top:1px solid var(--line)}.section:first-of-type{border-top:0}.hint{font-size:11px;color:var(--muted);margin:8px 0 15px;line-height:1.5}.materials{display:grid;grid-template-columns:1fr 1fr;gap:8px}.material{border:1px solid #444a3c;background:#252821;color:var(--text);padding:13px 8px;border-radius:9px;font-size:12px}.material.active{background:var(--lime);color:#10110f;border-color:var(--lime);font-weight:800}.field{margin:17px 0}.field-head{display:flex;justify-content:space-between;gap:10px;font-size:12px;margin-bottom:11px}.value{color:var(--lime);font-family:monospace}input[type=range]{width:100%;accent-color:var(--lime);cursor:pointer}select{width:100%;background:#262a22;border:1px solid #454b3f;color:var(--text);padding:11px;border-radius:8px}.colors{display:flex;gap:8px;align-items:center}.colors input[type=color]{height:40px;width:55px;background:none;border:1px solid var(--line);padding:3px;border-radius:8px;cursor:pointer}.colors input[type=text]{width:100%;min-width:0;background:#252821;border:1px solid var(--line);color:var(--text);padding:11px;border-radius:8px;font-family:monospace}.checks{display:flex;gap:8px;align-items:center;font-size:12px;margin-top:12px}.checks input{accent-color:var(--lime)}.actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:17px}.btn{border:1px solid #4b5243;background:#292e26;color:var(--text);border-radius:9px;padding:12px;font-weight:700;font-size:12px}.btn:hover{border-color:var(--lime)}.btn.primary{background:var(--lime);color:#12150b;border-color:var(--lime)}.stage{min-width:0;display:flex;flex-direction:column;gap:18px}.hero{display:flex;justify-content:space-between;align-items:end;gap:15px}.hero h1{font-size:clamp(32px,5vw,62px);font-weight:950;letter-spacing:-3px;line-height:1;margin:6px 0}.hero p{margin:0;color:var(--muted);font-size:13px}.tag{color:var(--lime);font-size:11px;letter-spacing:2px}.preview{background:#1a1c19;border:1px solid var(--line);border-radius:17px;overflow:hidden}.preview-top{padding:15px 20px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);gap:10px}.preview-top strong{font-size:12px}.preview-top small{color:var(--muted)}.canvas-wrap{padding:20px;display:flex;justify-content:center;align-items:center;min-height:470px;background:radial-gradient(circle at 50% 45%,#252920,#141612 75%)}canvas{display:block;max-width:100%;height:auto;cursor:grab;touch-action:none;box-shadow:0 20px 60px #0005;border:1px solid #ffffff12}.preview-bottom{padding:14px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid var(--line);font-size:11px;color:var(--muted)}.bottom-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.info{border:1px solid var(--line);background:var(--panel);padding:18px;border-radius:12px}.info strong{font-size:12px}.info p{font-size:12px;color:var(--muted);line-height:1.6;margin:8px 0 0}.status{color:var(--lime)!important}footer{text-align:center;padding:20px;color:#747d6d;font-size:11px;letter-spacing:1px}@media(max-width:850px){main{grid-template-columns:1fr;padding:16px}.sidebar{order:2}.stage{order:1}header{padding:0 17px}.brand{font-size:22px}.canvas-wrap{min-height:250px;padding:12px}.hero h1{letter-spacing:-1.5px}.bottom-grid{grid-template-columns:1fr}.preview-bottom{flex-wrap:wrap}}
+.selection-panel{padding:13px;border:1px solid #526047;border-radius:10px;background:#252b22;margin:8px 0 16px}.selection-panel .field-head{align-items:center;margin:0}.selection-panel strong{font-size:12px;color:var(--lime)}.selection-panel .hint{margin:9px 0 0}.btn.small{padding:7px 9px;font-size:10px}.selection-panel button:disabled{opacity:.35;cursor:default}
+/* Editorial / independent art-book visual language */
+:root{--bg:#f6f5f0;--panel:#faf9f5;--line:#c6c5bd;--lime:#252520;--text:#22221f;--muted:#74736c}
+body{background:var(--bg);color:var(--text);font-family:Arial,'Noto Sans TC',sans-serif}
+header{height:88px;border-bottom:1px solid #24241f;padding:0 3.3vw}
+.brand{font-family:Georgia,'Times New Roman',serif;font-weight:400;font-size:29px;letter-spacing:-1.2px}
+.brand span{color:#77766f;margin:0 4px}.tiny,.tag,.pill,h2,.value{font-family:'Courier New',monospace}
+.tiny{color:#77766f;letter-spacing:.9px}.pill{border-radius:0;color:#24241f;border-color:#aaa99f}
+main{max-width:1600px;grid-template-columns:320px minmax(0,1fr);gap:38px;padding:32px 3.3vw}
+.sidebar{border:1px solid #c8c6bd;border-radius:0;padding:22px 22px 24px;background:#faf9f5}
+.topline h1{font-family:Georgia,'Noto Serif TC',serif;font-weight:400;font-size:23px;letter-spacing:-.5px}
+h2{font-size:11px;letter-spacing:1.1px;font-weight:400}.hint{color:#77766f;font-size:11px}
+.section{border-color:#d3d1c8}.selection-panel{background:#f1f0e9;border:1px solid #c6c5bc;border-radius:0}
+.selection-panel strong{color:#22221f}.material{background:#f8f7f2;color:#24241f;border:1px solid #bbb9af;border-radius:0;font-size:12px}
+.material.active{background:#252520;color:#fffef7;border-color:#252520}
+.btn,.btn.small{border-radius:0;background:#f7f6f0;color:#22221f;border-color:#b5b3a8}
+.btn:hover{border-color:#22221f;background:#ecebe4}.btn.primary{background:#24241f;color:#fffdf6;border-color:#24241f}
+.value,.status{color:#282823!important}.colors input[type=text],select{border-radius:0;background:#f9f8f3;color:#24241f;border-color:#bbb9af}
+.colors input[type=color]{border-radius:0;border-color:#bbb9af}input[type=range],.checks input{accent-color:#292924}
+.hero{padding:14px 0 10px;align-items:end}.hero h1{font-family:Georgia,'Times New Roman',serif;font-weight:400;font-size:clamp(44px,6vw,91px);letter-spacing:-4px;line-height:.93;margin:18px 0}
+.hero h1 span{color:#252520!important}.hero p{color:#66665e}.tag{color:#65645d;letter-spacing:1px}
+.preview{border-radius:0;background:#f9f8f3;border:1px solid #b9b7ad}.preview-top,.preview-bottom{border-color:#c8c6bc}
+.preview-top small,.preview-bottom{color:#6c6b64}.canvas-wrap{background:#eeede7;min-height:470px;padding:22px}
+canvas{border:1px solid #cccac1;box-shadow:0 4px 16px #24241f13;background-image:linear-gradient(45deg,#e9e8e1 25%,transparent 25%),linear-gradient(-45deg,#e9e8e1 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#e9e8e1 75%),linear-gradient(-45deg,transparent 75%,#e9e8e1 75%);background-size:20px 20px;background-position:0 0,0 10px,10px -10px,-10px 0}
+.info{background:#faf9f5;border:1px solid #c9c7bd;border-radius:0}.info p{color:#74736c}footer{color:#77766f;border-top:1px solid #c8c6bd}
+@media(max-width:850px){main{grid-template-columns:1fr;gap:20px;padding:18px}.hero h1{font-size:48px;letter-spacing:-2px}.sidebar{order:2}.stage{order:1}}
+</style>
+</head>
+<body>
+<header><div class="brand">STAR<span>✳</span>STUDIO</div><div class="tiny">AN EXPERIMENTAL STAR-MAKING TOOL</div><div class="pill">● 即時畫布</div></header>
+<main>
+<aside class="sidebar">
+<div class="topline"><h1>打造你的星星</h1><span class="tiny">01 / 編輯器</span></div>
+<div class="section"><h2>01 — 材質</h2><p class="hint">參考編輯設計與印刷媒材，為星星選擇不同質感。</p><div class="materials" id="materials"><button class="material" data-mat="halftone">◉ 印刷網點</button><button class="material active" data-mat="metal">✦ 紙張壓花</button><button class="material" data-mat="grain">░ 印刷顆粒</button><button class="material" data-mat="glow">☼ 柔光</button></div></div>
+<div class="section"><h2>02 — 造型與排列</h2>
+<div class="selection-panel"><div class="field-head"><strong id="selectionTitle">目前調整：全部星星</strong><button class="btn small" id="clearSelection" type="button">取消選取</button></div><p class="hint" id="selectionHint">未選取時，大小、星角與旋轉會套用全部星星。點選畫布上的星星即可單獨調整。</p></div>
+<div class="field"><div class="field-head"><label for="count">星星數量</label><span class="value" id="countVal">12</span></div><input id="count" type="range" min="1" max="30" value="12"></div>
+<div class="field"><div class="field-head"><label for="size">星星大小</label><span class="value" id="sizeVal">65%</span></div><input id="size" type="range" min="15" max="100" value="65"></div>
+<div class="field"><div class="field-head"><label for="tipSharpness">星角尖銳度</label><span class="value" id="tipSharpnessVal">45%</span></div><input id="tipSharpness" type="range" min="0" max="100" value="45"></div>
+<div class="field"><div class="field-head"><label for="rotation">旋轉角度</label><span class="value" id="rotationVal">0°</span></div><input id="rotation" type="range" min="0" max="360" value="0"></div>
+<div class="field"><div class="field-head"><label for="layout">排列方式</label></div><select id="layout"><option value="scatter">隨機散落</option><option value="grid">整齊排列</option><option value="cluster">中央集中</option></select></div>
+<div class="actions"><button class="btn" id="shuffle">↝ 重新排列</button><button class="btn" id="reset">↺ 全部重設</button></div></div>
+<div class="section"><h2>03 — 顏色與材質</h2><div class="field" id="starColorControl"><div class="field-head"><label for="color">星星顏色</label></div><div class="colors"><input id="color" type="color" value="#30302d"><input id="hex" type="text" value="#30302D" maxlength="7" aria-label="Hex color"></div></div>
+<div id="chromeControls"><div class="field"><div class="field-head"><label for="embossMode">壓印類型</label></div><select id="embossMode"><option value="raised">凸起壓花</option><option value="pressed">凹陷壓印</option></select></div><div class="field"><div class="field-head"><label for="roundness">星角圓潤度</label><span class="value" id="roundnessVal">70%</span></div><input id="roundness" type="range" min="0" max="100" value="70"></div><div class="field"><div class="field-head"><label for="puff">壓花深度</label><span class="value" id="puffVal">80%</span></div><input id="puff" type="range" min="0" max="100" value="80"></div><div class="field"><div class="field-head"><label for="reflection">邊緣柔和度</label><span class="value" id="reflectionVal">90%</span></div><input id="reflection" type="range" min="0" max="100" value="90"></div></div><div class="field"><div class="field-head"><label for="texture">材質強度</label><span class="value" id="textureVal">55%</span></div><input id="texture" type="range" min="0" max="100" value="55"></div>
+<div class="field" id="printOpacityControl"><div class="field-head"><label for="printOpacity">印刷顆粒透明度</label><span class="value" id="printOpacityVal">65%</span></div><input id="printOpacity" type="range" min="5" max="100" value="65"><p class="hint">只調整網點與噪點的墨色透明度，不會在背後添加底色。</p></div><div class="section"><h2>04 — 照片與位置</h2><p class="hint">匯入照片當作底圖；點選星星後可拖曳移動，並單獨調整大小和旋轉。</p><input id="photoInput" type="file" accept="image/*" style="width:100%;font-size:12px;color:var(--muted)"><div class="actions"><button class="btn" id="removePhoto">✕ 移除照片</button><button class="btn" id="centerPhoto">▣ 適合畫布</button></div><p class="hint" id="photoName">尚未選擇圖片；匯入照片會一併輸出</p><label class="checks"><input type="checkbox" id="showHandles" checked> 顯示選取框（不會輸出）</label></div><div class="field"><div class="field-head"><label for="background">畫布背景</label></div><select id="background"><option value="transparent">透明</option><option value="dark">黑色</option><option value="cream">紙張白</option><option value="custom">自訂顏色</option></select></div><div class="colors" id="bgPicker" hidden><input type="color" id="bgColor" value="#f4f1e9"><span class="hint">自訂背景</span></div>
+<label class="checks"><input type="checkbox" id="randomSize" checked> 隨機產生不同星星大小</label></div>
+<button class="btn primary" id="download" style="width:100%;font-size:14px;padding:17px">↓ 下載 PNG</button><p class="hint" style="text-align:center;margin-bottom:0">1200 × 800 像素 · 所見即所得</p>
+</aside>
+<section class="stage"><div class="hero"><div><div class="tag">INDEX  /  FORM  /  TEXTURE</div><h1>MAKE YOUR<br>OWN STARS<span style="color:var(--lime)">.</span></h1><p>匯入照片、自由擺放星星、調整材質並下載作品。</p></div><div class="tiny">VISUAL INDEX<br>VOL. 001</div></div>
+<div class="preview"><div class="preview-top"><strong>✳ 畫布預覽</strong><small id="previewMeta">EMBOSS / 12 STARS</small></div><div class="canvas-wrap"><canvas id="canvas" width="1200" height="800" aria-label="Star artwork preview"></canvas></div><div class="preview-bottom"><span>1200 × 800 像素 &nbsp; / &nbsp; 可下載 PNG</span><span id="status" class="status">● LIVE PREVIEW</span></div></div>
+<div class="bottom-grid"><div class="info"><strong>✦ 自由創作</strong><p>試試紙張壓花、網點、底片噪點與夢幻光暈。所有材質都在瀏覽器中產生。</p></div><div class="info"><strong>↓ 一鍵匯出</strong><p>透明底 PNG 可直接用於排版、海報或社群設計。</p></div></div></section>
+</main><footer>STAR STUDIO  /  INDEPENDENT GRAPHIC EXPERIMENT  /  2026</footer>
+<script>
+(()=>{'use strict';const canvas=document.getElementById('canvas'),ctx=canvas.getContext('2d'),W=canvas.width,H=canvas.height;const $=id=>document.getElementById(id);const defaults={mat:'metal',count:12,size:65,rotation:0,layout:'scatter',color:'#30302d',roundness:70,tipSharpness:45,puff:80,reflection:65,embossMode:'raised',texture:55,printOpacity:65,background:'transparent',bgColor:'#f4f1e9',randomSize:true};let state={...defaults},seed=1937,stars=[],photo=null,showHandles=true,selected=-1,dragging=-1;function randGen(n){return()=>{n=(Math.imul(n,1664525)+1013904223)>>>0;return n/4294967296}}function clamp(v,a,b){return Math.max(a,Math.min(b,v))}function hexToRgb(h){h=h.replace('#','');return [0,2,4].map(i=>parseInt(h.slice(i,i+2),16))}function rgba(rgb,a=1){return `rgba(${rgb.map(v=>Math.round(clamp(v,0,255))).join(',')},${a})`}function mix(c1,c2,t){return c1.map((v,i)=>v*(1-t)+c2[i]*t)}function starVertices(x,y,r,rot=0,sharp=state.tipSharpness){let pts=[];const inner=.68-(sharp/100)*.42;for(let i=0;i<10;i++){const a=-Math.PI/2+rot+i*Math.PI/5,rr=i%2?r*inner:r;pts.push([x+Math.cos(a)*rr,y+Math.sin(a)*rr])}return pts}
+function starPath(c,x,y,r,rot=0,sharp=state.tipSharpness){const pts=starVertices(x,y,r,rot,sharp),round=.06+(state.roundness/100)*.39;c.beginPath();for(let i=0;i<10;i++){const prev=pts[(i+9)%10],cur=pts[i],next=pts[(i+1)%10];const a=[cur[0]+(prev[0]-cur[0])*round,cur[1]+(prev[1]-cur[1])*round],b=[cur[0]+(next[0]-cur[0])*round,cur[1]+(next[1]-cur[1])*round];if(!i)c.moveTo(...a);else c.lineTo(...a);c.quadraticCurveTo(...cur,...b)}c.closePath()}
+function drawVolume(s,col,kind){const pts=starVertices(s.x,s.y,s.r,s.rot),depth=Math.max(3,s.r*.11),base=mix(col,[12,13,19],.5);ctx.save();ctx.shadowColor='rgba(0,0,0,.45)';ctx.shadowBlur=s.r*.17;ctx.shadowOffsetY=depth*.7;starPath(ctx,s.x,s.y+depth,s.r,s.rot);ctx.fillStyle=rgba(base);ctx.fill();ctx.restore();starPath(ctx,s.x,s.y,s.r,s.rot,s.sharp);ctx.save();ctx.clip();const g=ctx.createLinearGradient(s.x-s.r,s.y-s.r,s.x+s.r,s.y+s.r);g.addColorStop(0,rgba(mix(col,[255,255,255],.8)));g.addColorStop(.35,rgba(mix(col,[255,255,255],.25)));g.addColorStop(.7,rgba(col));g.addColorStop(1,rgba(mix(col,[0,0,0],.45)));ctx.fillStyle=g;ctx.fillRect(s.x-s.r,s.y-s.r,s.r*2,s.r*2);for(let i=0;i<10;i++){ctx.beginPath();ctx.moveTo(s.x-s.r*.09,s.y-s.r*.13);ctx.lineTo(...pts[i]);ctx.lineTo(...pts[(i+1)%10]);ctx.closePath();ctx.fillStyle=rgba(i%2?mix(col,[255,255,255],.24):mix(col,[0,0,0],.20),kind==='metal'?.44:.20);ctx.fill()}ctx.restore();starPath(ctx,s.x,s.y,s.r,s.rot,s.sharp);ctx.strokeStyle=rgba(mix(col,[255,255,255],.65),.8);ctx.lineWidth=Math.max(1,s.r*.018);ctx.stroke()}
+function imageBounds(){if(!photo||!photo.naturalWidth||!photo.naturalHeight)return {x:0,y:0,w:W,h:H};const ratio=Math.min(W/photo.naturalWidth,H/photo.naturalHeight);const w=photo.naturalWidth*ratio,h=photo.naturalHeight*ratio;return {x:(W-w)/2,y:(H-h)/2,w,h}}
+function starRadius(st){return st.r*(state.size/65)*(st.sizeScale??1)}
+function starExtent(st){return starRadius(st)*(state.mat==='glow'?1.22:1.05)}
+function fitStar(st){
+  // The image is a clipping mask, not a movement constraint. A star may
+  // overlap the photograph edge, but the visible artwork is clipped to it.
+  const b=imageBounds(), r=starRadius(st);
+  const extent=r*(state.mat==='glow'?3.35:1.15);
+  // Keep the star reachable even when most of it is outside the photo.
+  st.x=clamp(st.x,b.x-extent*.75,b.x+b.w+extent*.75);
+  st.y=clamp(st.y,b.y-extent*.75,b.y+b.h+extent*.75);
+}
+function fitAllStars(){for(const st of stars)fitStar(st)}
+function positions(){let r=randGen(seed),out=[];const n=state.count;for(let i=0;i<n;i++){let x,y;if(state.layout==='grid'){const cols=Math.ceil(Math.sqrt(n*1.5)),rows=Math.ceil(n/cols);x=(i%cols+.5)/cols*W;y=(Math.floor(i/cols)+.5)/rows*H}else if(state.layout==='cluster'){x=W/2+(r()+r()+r()-1.5)*W*.4;y=H/2+(r()+r()+r()-1.5)*H*.4}else{x=85+r()*(W-170);y=85+r()*(H-170)}const radius=(22+65*.85)*(state.randomSize?.45+r()*.9:1);out.push({x,y,r:radius,rot:(r()-.5)*.18,noiseSeed:Math.floor(r()*1e9),sizeScale:1,rotationOffset:0})}return out}
+function reconcileStars(regenerate=false){if(regenerate){stars=positions();selected=-1;return}const desired=positions();while(stars.length<state.count)stars.push(desired[stars.length]);if(stars.length>state.count)stars.length=state.count;if(selected>=stars.length)selected=-1}
+function drawHalftone(s,col){
+  const {x,y,r,rot}=s;
+  ctx.save();
+  const mask=makeStarMask(s);
+  const gap=clamp(12-state.texture*.075,4.3,12);
+  const ink=rgba(mix(col,[14,18,18],.10),state.printOpacity/100);
+  const cos=Math.cos(rot),sin=Math.sin(rot);
+  for(let v=-r;v<=r;v+=gap){
+    const row=Math.round((v+r)/gap);
+    for(let u=-r;u<=r;u+=gap){
+      const localU=u+(row%2)*gap*.5;
+      const px=x+localU*cos-v*sin,py=y+localU*sin+v*cos;
+      if(!ctx.isPointInPath(mask,px,py))continue;
+      // Print-style halftone: largest dots at the center, smaller toward the tips.
+      const distance=Math.sqrt((localU/r)**2+(v/r)**2);
+      const t=clamp(distance/1.10,0,1);
+      const fade=t*t*(3-2*t);
+      const dotRadius=gap*(.10+.39*(1-fade));
+      ctx.beginPath();ctx.arc(px,py,dotRadius,0,Math.PI*2);
+      ctx.fillStyle=ink;ctx.fill();
+    }
+  }
+  ctx.restore();
+}
+function drawMetal(s,col){
+  // Blind emboss: preserve the existing backdrop, without filling the star.
+  // A pair of narrow directional rim highlights/shadows models raised or pressed paper.
+  const depth=state.puff/100;
+  const softness=state.reflection/100;
+  const sign=state.embossMode==='pressed'?-1:1;
+  const offset=.45+s.r*(.006+depth*.028);
+  const width=Math.max(1.5,s.r*(.034+depth*.053));
+  const blur=Math.max(.65,s.r*(.007+softness*.033));
+  const opacity=(.24+depth*.65)*(1-softness*.13);
+  const mask=makeStarMask(s);
+  ctx.save();
+  // Keep the original photo/background completely visible through the star.
+  // Restrict both directional strokes to a narrow band along the contour.
+  ctx.clip(mask);
+  ctx.filter=`blur(${blur.toFixed(2)}px)`;
+  ctx.lineWidth=width;
+  ctx.lineJoin='round';
+  ctx.strokeStyle=`rgba(255,255,255,${Math.min(.97,opacity).toFixed(3)})`;
+  starPath(ctx,s.x-sign*offset,s.y-sign*offset,s.r,s.rot,s.sharp);ctx.stroke();
+  ctx.strokeStyle=`rgba(23,19,17,${Math.min(.78,opacity*.88).toFixed(3)})`;
+  starPath(ctx,s.x+sign*offset,s.y+sign*offset,s.r,s.rot,s.sharp);ctx.stroke();
+  ctx.restore();
+}
+function makeStarMask(s){
+  const path=new Path2D();const pts=starVertices(s.x,s.y,s.r,s.rot,s.sharp),round=.06+(state.roundness/100)*.39;
+  for(let i=0;i<10;i++){
+    const prev=pts[(i+9)%10],cur=pts[i],next=pts[(i+1)%10];
+    const a=[cur[0]+(prev[0]-cur[0])*round,cur[1]+(prev[1]-cur[1])*round];
+    const b=[cur[0]+(next[0]-cur[0])*round,cur[1]+(next[1]-cur[1])*round];
+    if(i===0)path.moveTo(...a);else path.lineTo(...a);
+    path.quadraticCurveTo(...cur,...b);
+  }
+  path.closePath();return path;
+}
+function drawGrain(s,col){
+  const {x,y,r}=s,random=randGen(s.noiseSeed),strength=state.texture/100;
+  const mask=makeStarMask(s);
+  // Printed ink is composed entirely of specks, never a filled or outlined star.
+  // Keep the specks large/opaque enough to remain visible at screen preview scale.
+  const ink=mix(col,[22,21,20],.52);
+  const highlights=mix(col,[255,255,255],.25);
+  const count=Math.round(r*r*(2.0+strength*3.4));
+  ctx.save();
+  for(let i=0;i<count;i++){
+    const px=x+(random()*2-1)*r,py=y+(random()*2-1)*r;
+    if(!ctx.isPointInPath(mask,px,py))continue;
+    const radius=.60+random()*(.65+strength*.90);
+    const edge=radius*3.5;
+    const near=(ctx.isPointInPath(mask,px+edge,py)?1:0)+(ctx.isPointInPath(mask,px-edge,py)?1:0)+(ctx.isPointInPath(mask,px,py+edge)?1:0)+(ctx.isPointInPath(mask,px,py-edge)?1:0);
+    const alpha=(state.printOpacity/100)*(.55+.45*near/4);
+    ctx.beginPath();ctx.arc(px,py,radius,0,Math.PI*2);
+    ctx.fillStyle=rgba(random()<.16?highlights:ink,alpha);ctx.fill();
+  }
+  ctx.restore();
+}
+function drawGlow(s,col){
+  const intensity=Math.max(.15,state.texture/100);
+  const radius=s.r;
+  ctx.save();
+  // Wide, luminous falloff with several overlapping halos.
+  ctx.globalCompositeOperation='screen';
+  for(const [spread,alpha] of [[3.35,.24],[2.35,.36],[1.55,.43]]){
+    const outer=radius*spread;
+    const halo=ctx.createRadialGradient(s.x,s.y,radius*.12,s.x,s.y,outer);
+    halo.addColorStop(0,rgba(mix(col,[255,255,255],.6),Math.min(.95,alpha*1.8*intensity)));
+    halo.addColorStop(.22,rgba(col,Math.min(.9,alpha*1.3*intensity)));
+    halo.addColorStop(.55,rgba(col,alpha*.60*intensity));
+    halo.addColorStop(1,rgba(col,0));
+    ctx.fillStyle=halo;
+    ctx.beginPath();ctx.arc(s.x,s.y,outer,0,Math.PI*2);ctx.fill();
+  }
+  // Star-shaped bloom makes the glow follow the silhouette rather than just a circle.
+  for(const [blur,alpha] of [[1.15,.65],[.65,.72],[.28,.86]]){
+    ctx.save();ctx.shadowColor=rgba(col,Math.min(1,alpha*intensity));
+    ctx.shadowBlur=radius*blur;
+    starPath(ctx,s.x,s.y,radius,s.rot,s.sharp);
+    ctx.fillStyle=rgba(col,.12*intensity);ctx.fill();ctx.restore();
+  }
+  ctx.globalCompositeOperation='source-over';
+  // Flat luminous silhouette: the star itself has no 3D shading.
+  starPath(ctx,s.x,s.y,radius,s.rot,s.sharp);
+  ctx.fillStyle=rgba(mix(col,[255,255,255],.64),.99);
+  ctx.fill();
+  ctx.restore();
+}
+function draw(exporting=false){ctx.clearRect(0,0,W,H);if(state.background!=='transparent'){ctx.fillStyle=state.background==='dark'?'#101311':state.background==='cream'?'#f5eedf':state.bgColor;ctx.fillRect(0,0,W,H)}if(photo&&photo.complete&&photo.naturalWidth>0){const ratio=Math.min(W/photo.naturalWidth,H/photo.naturalHeight);const ww=photo.naturalWidth*ratio,hh=photo.naturalHeight*ratio;ctx.drawImage(photo,(W-ww)/2,(H-hh)/2,ww,hh)}const col=hexToRgb(state.color);ctx.save();if(photo){const b=imageBounds();ctx.beginPath();ctx.rect(b.x,b.y,b.w,b.h);ctx.clip()}for(const st of stars){const s={...st,r:st.r*(state.size/65)*(st.sizeScale??1),rot:st.rot+((state.rotation+(st.rotationOffset??0))*Math.PI/180),sharp:st.tipSharpness??state.tipSharpness};if(state.mat==='halftone')drawHalftone(s,col);else if(state.mat==='metal')drawMetal(s,col);else if(state.mat==='grain')drawGrain(s,col);else drawGlow(s,col)}ctx.restore();if(!exporting&&showHandles&&selected>=0&&stars[selected]){const s=stars[selected],r=s.r*(state.size/65)*(s.sizeScale??1);ctx.save();if(photo){const b=imageBounds();ctx.beginPath();ctx.rect(b.x,b.y,b.w,b.h);ctx.clip()}ctx.strokeStyle='#34342f';ctx.lineWidth=2;ctx.setLineDash([7,7]);ctx.strokeRect(s.x-r*1.2,s.y-r*1.2,r*2.4,r*2.4);ctx.restore()}$('previewMeta').textContent=({halftone:'網點',metal:'壓花',grain:'噪點',glow:'發光'})[state.mat]+' / '+state.count+' 顆星星';if(!exporting)$('status').textContent='● 星星可跨越圖片邊緣，超出部分自動裁切 · 點空白處取消選取'}
+function canvasPoint(e){const box=canvas.getBoundingClientRect();return {x:(e.clientX-box.left)*W/box.width,y:(e.clientY-box.top)*H/box.height}}
+canvas.addEventListener('pointerdown',e=>{const p=canvasPoint(e);for(let i=stars.length-1;i>=0;i--){const s=stars[i],r=s.r*(state.size/65)*(s.sizeScale??1);if(Math.hypot(p.x-s.x,p.y-s.y)<r*1.18){dragging=i;selected=i;canvas.setPointerCapture(e.pointerId);canvas.style.cursor='grabbing';sync();return}}selected=-1;sync()});
+canvas.addEventListener('pointermove',e=>{if(dragging<0)return;const p=canvasPoint(e);stars[dragging].x=p.x;stars[dragging].y=p.y;fitStar(stars[dragging]);draw()});
+function endDrag(){dragging=-1;canvas.style.cursor='grab'}canvas.addEventListener('pointerup',endDrag);canvas.addEventListener('pointercancel',endDrag);
+$('photoInput').addEventListener('change',e=>{
+  const file=e.target.files && e.target.files[0];
+  if(!file)return;
+  const name=file.name||'圖片';
+  if(!(/^image\//.test(file.type)||/\.(png|jpe?g|webp|gif|bmp)$/i.test(name))){$('photoName').textContent='格式不支援，請選擇 JPG、PNG 或 WebP';return;}
+  $('photoName').textContent='正在載入：'+name;
+  $('status').textContent='正在讀取圖片…';
+  const reader=new FileReader();
+  reader.onerror=()=>{$('photoName').textContent='讀取失敗，請重新選擇圖片';$('status').textContent='圖片讀取失敗';};
+  reader.onload=()=>{
+    const img=new Image();
+    img.onload=()=>{
+      if(!img.naturalWidth||!img.naturalHeight){$('photoName').textContent='圖片尺寸異常';return;}
+      photo=img;
+      const bounds=imageBounds();for(const st of stars){st.x=bounds.x+(st.x/W)*bounds.w;st.y=bounds.y+(st.y/H)*bounds.h}fitAllStars();
+      $('photoName').textContent='✓ 已匯入：'+name+'（'+img.naturalWidth+' × '+img.naturalHeight+'）';
+      draw();
+      $('status').textContent='✓ 圖片已顯示在畫布底層，可拖曳星星裝飾';
+    };
+    img.onerror=()=>{$('photoName').textContent='無法解碼圖片，請改用 JPG 或 PNG';$('status').textContent='圖片格式不相容';};
+    img.src=reader.result;
+  };
+  reader.readAsDataURL(file);
+});
+$('removePhoto').addEventListener('click',()=>{photo=null;$('photoInput').value='';$('photoName').textContent='尚未選擇圖片';draw()});$('centerPhoto').addEventListener('click',()=>draw());$('showHandles').addEventListener('change',e=>{showHandles=e.target.checked;draw()});
+function sync(){for(const id of ['count','size','rotation','tipSharpness','layout','color','roundness','puff','reflection','texture','printOpacity','background','bgColor'])$(id).value=state[id];$('hex').value=state.color.toUpperCase();$('randomSize').checked=state.randomSize;$('countVal').textContent=state.count;const chosen=selected>=0?stars[selected]:null;$('size').value=chosen?Math.round(clamp((chosen.sizeScale??1)*100,15,200)):state.size;$('size').min=chosen?15:15;$('size').max=chosen?200:100;$('rotation').value=chosen?Math.round(((chosen.rotationOffset??0)%360+360)%360):state.rotation;$('sizeVal').textContent=(chosen?Math.round((chosen.sizeScale??1)*100):state.size)+'%';$('tipSharpness').value=chosen?(chosen.tipSharpness??state.tipSharpness):state.tipSharpness;$('tipSharpnessVal').textContent=(chosen?(chosen.tipSharpness??state.tipSharpness):state.tipSharpness)+'%';$('rotationVal').textContent=(chosen?Math.round(((chosen.rotationOffset??0)%360+360)%360):state.rotation)+'°';$('selectionTitle').textContent=chosen?'目前調整：第 '+(selected+1)+' 顆星星':'目前調整：全部星星';$('selectionHint').textContent=chosen?'此處的大小、星角與旋轉只影響選取的星星；拖曳可改變位置。':'未選取時，大小、星角與旋轉會套用全部星星。點選畫布上的星星即可單獨調整。';$('clearSelection').disabled=!chosen;$('textureVal').textContent=state.texture+'%';$('printOpacityVal').textContent=state.printOpacity+'%';$('printOpacityControl').hidden=!(state.mat==='halftone'||state.mat==='grain');$('roundnessVal').textContent=state.roundness+'%';$('puffVal').textContent=state.puff+'%';$('reflectionVal').textContent=state.reflection+'%';$('chromeControls').hidden=state.mat!=='metal';$('starColorControl').hidden=state.mat==='metal';$('embossMode').value=state.embossMode;$('bgPicker').hidden=state.background!=='custom';document.querySelectorAll('[data-mat]').forEach(b=>{b.classList.toggle('active',b.dataset.mat===state.mat);b.setAttribute('aria-pressed',String(b.dataset.mat===state.mat))});draw()}
+for(const id of ['count','size','rotation','tipSharpness','roundness','puff','reflection','texture','printOpacity'])$(id).addEventListener('input',e=>{if(selected>=0&&(id==='size'||id==='rotation'||id==='tipSharpness')){if(id==='size')stars[selected].sizeScale=Number(e.target.value)/100;else if(id==='rotation')stars[selected].rotationOffset=Number(e.target.value);else stars[selected].tipSharpness=Number(e.target.value)}else{state[id]=Number(e.target.value);if(id==='count')reconcileStars()}fitAllStars();sync()});for(const id of ['layout','color','background','bgColor'])$(id).addEventListener('input',e=>{state[id]=e.target.value;if(id==='layout')reconcileStars(true);fitAllStars();if(id==='color')$('hex').value=state.color.toUpperCase();sync()});$('hex').addEventListener('change',e=>{let v=e.target.value.trim();if(/^#[0-9a-fA-F]{6}$/.test(v)){state.color=v;sync()}else $('hex').value=state.color});$('embossMode').addEventListener('change',e=>{state.embossMode=e.target.value;sync()});$('randomSize').addEventListener('change',e=>{state.randomSize=e.target.checked;draw()});document.querySelectorAll('[data-mat]').forEach(b=>b.addEventListener('click',()=>{state.mat=b.dataset.mat;sync()}));$('clearSelection').addEventListener('click',()=>{selected=-1;sync()});$('shuffle').addEventListener('click',()=>{seed=(seed+92717)>>>0;reconcileStars(true);fitAllStars();draw()});$('reset').addEventListener('click',()=>{state={...defaults};seed=1937;reconcileStars(true);photo=null;$('photoInput').value='';$('photoName').textContent='尚未選擇圖片';sync()});$('download').addEventListener('click',()=>{draw(true);const b=imageBounds();const output=document.createElement('canvas');output.width=Math.max(1,Math.round(b.w));output.height=Math.max(1,Math.round(b.h));output.getContext('2d').drawImage(canvas,b.x,b.y,b.w,b.h,0,0,output.width,output.height);output.toBlob(blob=>{if(!blob){$('status').textContent='匯出失敗';return}const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=`star-studio-${state.mat}-${Date.now()}.png`;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);$('status').textContent='✓ PNG 已下載';draw()},'image/png')});reconcileStars(true);sync()})();
+</script>
+</body></html>
